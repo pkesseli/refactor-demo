@@ -28,4 +28,9 @@ public class Bulk {
   public String nullSafeF(String s) {
     return s==null ? "" : s;
   }
+
+  public void useMaxString(Collection<String> strings) {
+    String max=maxString(strings);
+    System.out.println(max);
+  }
 }
