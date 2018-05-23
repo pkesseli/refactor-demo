@@ -1,6 +1,7 @@
 package com.diffblue.refactor.demo;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 public class Bulk {
@@ -10,5 +11,21 @@ public class Bulk {
     for(Integer value : data)
       if(value>0)
         copy.add(value);
+  }
+
+  public String g(String s) {
+    return s;
+  }
+
+  public String maxString(Collection<String> strings) {
+    String result=null;
+    for(String string : strings)
+      if(result==null||result.length()<string.length())
+        result=string;
+    return result;
+  }
+
+  public String nullSafeF(String s) {
+    return s==null ? "" : s;
   }
 }
